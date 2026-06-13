@@ -249,6 +249,7 @@ include __DIR__ . '/../includes/header.php';
           <span class="tag-pill">Portfolio</span>
         </div>
         <h2 class="h2 mt-12">Featured Portfolio<span class="serif-mark">&reg;</span></h2>
+        <p class="body-text mt-16" style="max-width:600px;">Explore a collection of high-quality, innovative designs crafted to elevate brands and captivate audiences. Each project reflects our commitment to creativity and excellence.</p>
       </div>
       <a href="/category/all" class="section-link">View portfolio <span class="arrow">&rarr;</span></a>
     </div>
@@ -362,7 +363,7 @@ include __DIR__ . '/../includes/header.php';
 <section class="stats-section" id="stats" style="position:relative; z-index:5;">
   <div class="container">
     <div class="stats-header" data-animate="fade-up">
-      <h3 class="h3 measure-lg">Numbers that speak volumes about our commitment to quality and excellence.</h3>
+      <h3 class="h3 measure-lg">I take pride in creating solutions that are not only visually stunning but also highly functional. Every number tells a story, and I'm excited to bring that same dedication.</h3>
     </div>
     <div class="stats-grid">
       <?php foreach ($stats as $stat): ?>
@@ -434,6 +435,7 @@ include __DIR__ . '/../includes/header.php';
       <div class="section-title-wrap">
         <span class="section-label">Voices</span>
         <h4 class="h4 mt-8">Trusted By Experts.</h4>
+        <p class="body-text mt-16" style="max-width:600px;">Real stories from real clients. See how our designs have transformed international and elevated businesses, and created lasting impressions.</p>
       </div>
       <button class="btn btn-sm" onclick="openQuoteModal()">Become a partner</button>
     </div>
@@ -581,6 +583,7 @@ include __DIR__ . '/../includes/header.php';
       <div class="section-title-wrap">
         <span class="section-label">Latest Updates</span>
         <h2 class="h2 mt-8">Latest Insights.<span class="serif-mark">&reg;</span></h2>
+        <p class="body-text mt-16" style="max-width:600px;">Explore my blog for design tips, industry insights, and creative inspiration. From tutorials to thought pieces, there's something for every curious mind.</p>
       </div>
       <a href="/blogs" class="section-link">View articles <span class="arrow">&rarr;</span></a>
     </div>
@@ -660,6 +663,10 @@ include __DIR__ . '/../includes/header.php';
     <div class="section-header" data-animate="fade-up">
       <span class="section-label">Premium Plans</span>
       <h2 class="h2 mt-8">Premium Plans. Feasible Plans.<span class="serif-mark">&reg;</span></h2>
+      <p class="body-text mt-16" style="max-width:600px;">Transparent pricing tailored to your needs. Let's discuss your project and find a plan that works for you.</p>
+      <div style="margin-top:24px;">
+        <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
+      </div>
     </div>
     <div class="pricing-grid" data-animate="fade-up">
       <div class="pricing-card">
