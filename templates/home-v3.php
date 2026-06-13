@@ -165,10 +165,10 @@ include __DIR__ . '/../includes/header.php';
   </div>
 </section>
 
-<!-- ===== CUT GROUP 02 — HERO (hero-image.webp bg + Hero features grid) ===== -->
+<!-- ===== CUT GROUP 02 — FEATURES (manufacturing.jpg bg + Hero features grid) ===== -->
 <div class="viper-cut-wrapper viper-cut-hero" id="heroReveal">
   <div class="viper-sticky-image">
-    <img src="<?php echo e($heroImage); ?>" alt="Custom Streetwear hero background" onerror="this.src='/uploads/default.jpg'">
+    <img src="/assets/images/manufacturing.jpg" alt="Custom Streetwear manufacturing background" onerror="this.src='/uploads/default.jpg'">
   </div>
 
   <section class="hero-section viper-cut-content" id="heroContent">
