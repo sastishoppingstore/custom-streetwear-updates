@@ -455,6 +455,12 @@ html, body {
   ) !important;
 }
 
+.hero-section.viper-cut-content {
+  clip-path: none !important;
+  margin-top: 0 !important;
+  padding-top: calc(var(--header-height) + 48px) !important;
+}
+
 /* =================================================================
    EXACT 3D FAN SPREAD GALLERY (COVERFLOW / FRAMER STYLE)
    ================================================================= */
