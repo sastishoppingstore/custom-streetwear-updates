@@ -45,7 +45,10 @@ $_galleryImgs = array_slice($_heroSliderImgs, 0, 8);
 $_products = dbFetchAll("SELECT id, title as name, slug, main_image as image, short_description FROM products WHERE status = 1 ORDER BY sort_order, id LIMIT 8");
 $_dbCats = dbFetchAll("SELECT id, name, slug, image, description FROM categories WHERE status = 1 ORDER BY sort_order, name LIMIT 4");
 
-$cutIntroImage = $heroImage;
+$cutIntroImage = '/assets/images/hero-after.jpg';
+if (!file_exists(CSW_ROOT . $cutIntroImage)) {
+    $cutIntroImage = $heroImage;
+}
 $cutPortfolioImage = !empty($categories[0]['image']) ? $categories[0]['image'] : (!empty($_dbCats[0]['image']) ? $_dbCats[0]['image'] : (!empty($_heroSliderImgs[0]) ? $_heroSliderImgs[0] : $heroImage));
 $cutBenefitsImage = '/uploads/fashion-bg.jpg';
 if (!file_exists(CSW_ROOT . $cutBenefitsImage)) {
@@ -306,13 +309,13 @@ include __DIR__ . '/../includes/header.php';
         <div style="margin-top:24px;" data-animate="fade-up">
           <div class="marquee-banner" style="overflow:hidden;">
             <div class="marquee-track" style="display:flex; animation:marquee 20s linear infinite; white-space:nowrap;">
-              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Convert More, Grow Faster</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Premium Fabric Manufacturing</span>
               <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
-              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Future-Proof &amp; Scalable</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Factory Direct Pricing</span>
               <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
-              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Convert More, Grow Faster</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Premium Fabric Manufacturing</span>
               <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
-              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Future-Proof &amp; Scalable</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Factory Direct Pricing</span>
               <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
             </div>
           </div>
@@ -343,7 +346,7 @@ include __DIR__ . '/../includes/header.php';
           <div class="process-step-desc">Professional sports uniforms for teams and organizations.</div>
         </div>
         <div class="process-step" data-animate="fade-up" data-delay="300">
-          <h5 class="process-step-title">Workwear &amp; Safety</h5>
+          <h5 class="process-step-title">Workwear &amp; Safety Apparel</h5>
           <div class="process-step-desc">Durable workwear and safety apparel for industrial use.</div>
         </div>
         <div class="process-step" data-animate="fade-up" data-delay="350">
@@ -638,14 +641,14 @@ include __DIR__ . '/../includes/header.php';
       </div>
       <div class="process-right">
         <div class="section-header" data-animate="fade-up">
-          <h2 class="h2">Custom Apparel Templates. Bringing Your Ideas to Life.</h2>
-          <p class="body-text mt-16">We specialize in creating premium custom apparel that represents your brand. From hoodies to jackets, tracksuits to uniforms, we bring your vision to life with precision and quality.</p>
+          <h2 class="h2">Custom Apparel Manufacturing. Bringing Your Ideas to Life.</h2>
+          <p class="body-text mt-16">As a leading fabric manufacturer, we specialize in turning your ideas into premium custom apparel. Whether it's hoodies, tracksuits, jackets, or uniforms, we ensure every piece meets the highest standards of quality and craftsmanship.</p>
         </div>
         <div style="margin-top:24px;" data-animate="fade-up">
-          <a href="/category/all" class="section-link">View portfolio <span class="arrow">&rarr;</span></a>
+          <a href="/category/all" class="section-link">View our products <span class="arrow">&rarr;</span></a>
         </div>
         <div style="margin-top:16px;" data-animate="fade-up">
-          <span class="tag-pill">299+ People Rated</span>
+          <span class="tag-pill">500+ Happy Clients</span>
         </div>
       </div>
     </div>
