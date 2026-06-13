@@ -18,6 +18,13 @@ $navItems = [
   ['label' => 'Work', 'url' => '/category/all', 'num' => '03'],
   ['label' => 'Blog', 'url' => '/blogs', 'num' => '04'],
 ];
+$catItems = [
+  ['label' => 'T-Shirts', 'url' => '/category/t-shirts'],
+  ['label' => 'Hoodies', 'url' => '/category/hoodies'],
+  ['label' => 'Tracksuits', 'url' => '/category/tracksuits'],
+  ['label' => 'Jackets', 'url' => '/category/jackets'],
+  ['label' => 'Uniforms', 'url' => '/category/sports-uniform'],
+];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,6 +79,9 @@ $navItems = [
           <?php echo e($item['label']); ?><sup><?php echo e($item['num']); ?></sup>
         </a>
         <?php endforeach; ?>
+        <?php foreach ($catItems as $cat): ?>
+        <a href="<?php echo e($cat['url']); ?>" class="header-cat-link"><?php echo e($cat['label']); ?></a>
+        <?php endforeach; ?>
       </nav>
       <div class="header-cta">
         <button class="btn-3d" onclick="openQuoteModal()">Get in touch</button>
@@ -92,6 +102,10 @@ $navItems = [
       <a href="<?php echo e($item['url']); ?>">
         <?php echo e($item['label']); ?><sup><?php echo e($item['num']); ?></sup>
       </a>
+      <?php endforeach; ?>
+      <div class="mobile-cat-divider"></div>
+      <?php foreach ($catItems as $cat): ?>
+      <a href="<?php echo e($cat['url']); ?>" class="mobile-cat-link"><?php echo e($cat['label']); ?></a>
       <?php endforeach; ?>
     </nav>
     <div class="mobile-drawer-footer">
