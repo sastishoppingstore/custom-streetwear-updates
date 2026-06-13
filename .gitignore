@@ -1,0 +1,30 @@
+# Large files
+Archive.zip
+admin.zip
+uploads/products/
+uploads/categories/
+uploads/blogs/
+uploads/settings/
+uploads/sliders/
+uploads/testimonials/
+uploads/pages/
+uploads/hero-image.webp
+uploads/default.jpg
+uploads/default.webp
+uploads-backup-before-chatgpt-images-20260608-190933/
+
+# Database files
+*.sql
+
+# Temporary files
+.cache
+*.tmp
+*.bak
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

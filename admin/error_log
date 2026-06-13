@@ -1,0 +1,147 @@
+[09-Jun-2026 14:54:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function adminLoginV2() in /home/custitty/new.customstreetwear.co/admin/login-v2.php:39
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/login-v2.php on line 39
+[09-Jun-2026 15:03:02 UTC] [CSW Activity] User: 1 | Action: Login | IP: 153.117.8.149 | Details: Admin logged in successfully via v2
+[09-Jun-2026 15:09:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'is_read' in 'WHERE' in /home/custitty/new.customstreetwear.co/includes/db.php:343
+Stack trace:
+#0 /home/custitty/new.customstreetwear.co/includes/db.php(343): PDO->prepare()
+#1 /home/custitty/new.customstreetwear.co/includes/db.php(352): dbQuery()
+#2 /home/custitty/new.customstreetwear.co/admin/includes/header.php(13): dbFetchOne()
+#3 /home/custitty/new.customstreetwear.co/admin/dashboard.php(25): include('/home/custitty/...')
+#4 {main}
+  thrown in /home/custitty/new.customstreetwear.co/includes/db.php on line 343
+[09-Jun-2026 15:26:37 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/pages.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/pages.php on line 43
+[10-Jun-2026 07:11:35 UTC] [CSW Activity] User: 1 | Action: Login | IP: 116.71.13.29 | Details: Admin logged in successfully via v2
+[10-Jun-2026 07:12:33 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/settings.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/settings.php on line 83
+[10-Jun-2026 07:12:38 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/location-seo.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/location-seo.php on line 54
+[10-Jun-2026 07:12:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/products.php:239
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/products.php on line 239
+[10-Jun-2026 07:12:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/subcategories.php:52
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/subcategories.php on line 52
+[10-Jun-2026 07:12:47 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/categories.php:97
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/categories.php on line 97
+[10-Jun-2026 07:12:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/media-manager.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/media-manager.php on line 54
+[10-Jun-2026 07:12:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/home-sections.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/home-sections.php on line 69
+[10-Jun-2026 07:12:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/sliders.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/sliders.php on line 36
+[10-Jun-2026 07:13:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/pages.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/pages.php on line 43
+[10-Jun-2026 07:13:24 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/menus.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/menus.php on line 44
+[10-Jun-2026 07:13:32 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/menus.php:24
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/menus.php on line 24
+[10-Jun-2026 07:16:54 UTC] [CSW Activity] User: 1 | Action: Login | IP: 116.71.13.29 | Details: Admin logged in successfully via v2
+[10-Jun-2026 07:17:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/site-reviews.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/site-reviews.php on line 48
+[10-Jun-2026 07:17:06 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'custitty_wafa.fc' in /home/custitty/new.customstreetwear.co/includes/db.php:343
+Stack trace:
+#0 /home/custitty/new.customstreetwear.co/includes/db.php(343): PDO->prepare()
+#1 /home/custitty/new.customstreetwear.co/includes/db.php(359): dbQuery()
+#2 /home/custitty/new.customstreetwear.co/admin/faq-categories.php(33): dbFetchAll()
+#3 {main}
+  thrown in /home/custitty/new.customstreetwear.co/includes/db.php on line 343
+[10-Jun-2026 07:19:17 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/home-sections.php:69
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/home-sections.php on line 69
+[10-Jun-2026 07:19:56 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/sliders.php:36
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/sliders.php on line 36
+[10-Jun-2026 07:20:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/pages.php:43
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/pages.php on line 43
+[10-Jun-2026 07:20:04 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/media-manager.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/media-manager.php on line 54
+[10-Jun-2026 07:20:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/categories.php:97
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/categories.php on line 97
+[10-Jun-2026 07:20:57 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/subcategories.php:52
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/subcategories.php on line 52
+[10-Jun-2026 07:20:59 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/products.php:239
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/products.php on line 239
+[10-Jun-2026 07:21:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/testimonials.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/testimonials.php on line 34
+[10-Jun-2026 07:21:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/site-reviews.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/site-reviews.php on line 48
+[10-Jun-2026 07:21:19 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/faqs.php:65
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/faqs.php on line 65
+[10-Jun-2026 07:21:21 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/faq-categories.php:45
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/faq-categories.php on line 45
+[10-Jun-2026 07:21:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seo_title' in 'WHERE' in /home/custitty/new.customstreetwear.co/includes/db.php:343
+Stack trace:
+#0 /home/custitty/new.customstreetwear.co/includes/db.php(343): PDO->prepare()
+#1 /home/custitty/new.customstreetwear.co/includes/db.php(352): dbQuery()
+#2 /home/custitty/new.customstreetwear.co/admin/seo-manager-v2.php(41): dbFetchOne()
+#3 {main}
+  thrown in /home/custitty/new.customstreetwear.co/includes/db.php on line 343
+[10-Jun-2026 07:21:58 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/location-seo.php:54
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/location-seo.php on line 54
+[10-Jun-2026 07:22:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/admins.php:140
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/admins.php on line 140
+[10-Jun-2026 07:22:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/settings.php:83
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/settings.php on line 83
+[10-Jun-2026 07:23:07 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfToken() in /home/custitty/new.customstreetwear.co/admin/menus.php:44
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/menus.php on line 44
+[10-Jun-2026 07:23:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function csrfField() in /home/custitty/new.customstreetwear.co/admin/run-migration.php:102
+Stack trace:
+#0 {main}
+  thrown in /home/custitty/new.customstreetwear.co/admin/run-migration.php on line 102
+[12-Jun-2026 13:57:18 UTC] [CSW Activity] User: 1 | Action: Login | IP: 72.255.52.84 | Details: Admin logged in successfully via v2
+[13-Jun-2026 06:52:30 UTC] [CSW Activity] User: 1 | Action: Login | IP: 72.255.52.84 | Details: Admin logged in successfully via v2

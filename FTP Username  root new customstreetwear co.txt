@@ -1,0 +1,16 @@
+FTP Username: root@new.customstreetwear.co
+FTP server: ftp.customstreetwear.co
+FTP & explicit FTPS port:  21
+pass  Wafa@4052364
+
+
+
+FTP Username: sm@customstreetwear.co
+FTP server: ftp.customstreetwear.co
+FTP & explicit FTPS port:  21
+
+
+pass  Wafa@4052364
+
+
+
