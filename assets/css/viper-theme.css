@@ -461,6 +461,8 @@ html, body {
   padding-top: calc(var(--header-height) + 48px) !important;
   background-color: transparent !important;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .hero-section.viper-cut-content::after {
@@ -475,6 +477,37 @@ html, body {
 .hero-section.viper-cut-content .container {
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+/* First cut group headline on image (Viper style) */
+.viper-cut-intro .hero-section.viper-cut-content {
+  min-height: 100vh;
+}
+
+.viper-cut-intro .page-main-heading {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+  letter-spacing: -0.03em;
+}
+
+.viper-cut-intro .page-sub-heading {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: rgba(255,255,255,0.85);
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.viper-cut-intro .hero-label {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+.viper-cut-intro .asterisk {
+  color: rgba(255,255,255,0.5);
 }
 
 /* Cut group approach section inside sticky */
@@ -517,6 +550,19 @@ html, body {
 .viper-cut-intro .viper-cut-content .viper-section-tag,
 .viper-cut-intro .viper-cut-content .section-counter {
   color: rgba(255,255,255,0.7) !important;
+}
+
+/* Hero content section (second cut group) */
+.viper-cut-hero .hero-section.viper-cut-content {
+  min-height: 80vh;
+  padding-top: 120px !important;
+}
+
+.viper-cut-hero .hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
 /* =================================================================
@@ -805,10 +851,18 @@ html, body {
   .hero-feature-text p { font-size: 0.8rem; }
   .hero-feature-icon { width: 30px; height: 30px; font-size: 0.75rem; }
 
+  /* Headline on image mobile */
+  .viper-cut-intro .page-main-heading { font-size: clamp(2.5rem, 10vw, 4rem); }
+  .viper-cut-intro .page-sub-heading { font-size: 0.9rem; padding: 0 16px; }
+  .viper-cut-intro .hero-section.viper-cut-content { min-height: 80vh; }
+
   /* Cut Section Mobile */
   .viper-cut-wrapper { min-height: auto; }
   .viper-sticky-image { position: relative; height: 50vh; }
   .viper-cut-content { margin-top: 0 !important; padding-top: 40px !important; }
+
+  /* Hero content section mobile */
+  .viper-cut-hero .hero-section.viper-cut-content { min-height: auto; padding-top: 80px !important; padding-bottom: 60px !important; }
 
   /* Section Meta Mobile */
   .viper-section-meta { flex-wrap: wrap; gap: 8px; }

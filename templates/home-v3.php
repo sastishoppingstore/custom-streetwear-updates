@@ -98,76 +98,84 @@ include __DIR__ . '/../includes/header.php';
   </div>
 </section>
 
-<!-- ===== CUT GROUP 01 — INTRO (hoodies.webp bg + Approach Style) ===== -->
+<!-- ===== CUT GROUP 01 — HEADLINE ON hoodies.webp (Viper style) ===== -->
 <div class="viper-cut-wrapper viper-cut-intro" id="introReveal">
   <div class="viper-sticky-image">
     <img src="<?php echo e($cutIntroImage); ?>" alt="Custom Streetwear intro background" onerror="this.src='/uploads/default.jpg'">
   </div>
 
-  <section class="section section-alt viper-cut-content" id="process" style="min-height:auto; padding-top:140px !important; padding-bottom:80px !important;">
+  <section class="hero-section viper-cut-content" id="heroSection">
     <div class="container">
-      <div class="viper-section-meta">
-        <span class="viper-section-tag"><span class="viper-dot"></span>Approach Style</span>
-        <span>(CQ&reg; &mdash; 02)</span>
-        <span>&copy;2025</span>
-      </div>
-      <div class="process-section">
-        <div class="process-left">
-          <span class="section-label" data-animate="fade-up">Approach Style</span>
-          <div class="counter-row" data-animate="fade-up" data-delay="100">
-            <span class="section-counter">(CQ&reg; &mdash; 02)</span>
-            <span class="section-counter">&copy;2025</span>
-          </div>
-        </div>
-        <div class="process-right">
-          <div class="process-step" data-animate="fade-up">
-            <div class="process-step-number">01</div>
-            <h5 class="process-step-title">Consultation &amp; Design</h5>
-            <div class="process-step-desc">We begin by understanding your vision, requirements, and brand identity. Our design team creates detailed mockups and samples to ensure every detail aligns with your expectations.</div>
-            <div class="process-progress-bar"><div class="process-progress-fill" style="width:25%"></div><span class="process-progress-label">25%</span></div>
-          </div>
-          <div class="process-step" data-animate="fade-up" data-delay="100">
-            <div class="process-step-number">02</div>
-            <h5 class="process-step-title">Production &amp; Quality Control</h5>
-            <div class="process-step-desc">Using state-of-the-art machinery and premium materials, we manufacture your order with precision. Every garment undergoes 12-point quality inspection before packaging.</div>
-            <div class="process-progress-bar"><div class="process-progress-fill" style="width:60%"></div><span class="process-progress-label">60%</span></div>
-          </div>
-          <div class="process-step" data-animate="fade-up" data-delay="200">
-            <div class="process-step-number">03</div>
-            <h5 class="process-step-title">Delivery &amp; Support</h5>
-            <div class="process-step-desc">We handle global logistics and shipping with real-time tracking. Our support team remains available 24/6 to assist with any post-delivery needs.</div>
-            <div class="process-progress-bar"><div class="process-progress-fill" style="width:100%"></div><span class="process-progress-label">100%</span></div>
-          </div>
-          <div style="margin-top:24px;" data-animate="fade-up">
-            <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
-          </div>
+      <div class="page-heading-content" style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:80vh;">
+        <div class="hero-label" data-animate="fade-up">&copy;2025</div>
+        <h1 class="page-main-heading" data-animate="fade-up" data-delay="100">
+          <?php echo e($hero['main_heading'] ?? 'Premium Custom Streetwear'); ?><span class="asterisk">*</span>
+        </h1>
+        <p class="page-sub-heading" data-animate="fade-up" data-delay="200">
+          <?php echo e($hero['subheading'] ?? 'Custom Streetwear is a leading manufacturer of custom clothing. Crafted with precision. Worn with purpose.'); ?>
+        </p>
+        <div data-animate="fade-up" data-delay="300" style="margin-top:32px;">
+          <button class="btn btn-lg" onclick="openQuoteModal()">Get in Touch</button>
         </div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- ===== CUT GROUP 02 — HERO (hero-image.webp bg + Hero text) ===== -->
+<!-- ===== SECTION 02 — APPROACH / PROCESS ===== -->
+<section class="section section-alt" id="process" style="position:relative; z-index:5;">
+  <div class="container">
+    <div class="viper-section-meta">
+      <span class="viper-section-tag"><span class="viper-dot"></span>Approach Style</span>
+      <span>(CQ&reg; &mdash; 02)</span>
+      <span>&copy;2025</span>
+    </div>
+    <div class="process-section">
+      <div class="process-left">
+        <span class="section-label" data-animate="fade-up">Approach Style</span>
+        <div class="counter-row" data-animate="fade-up" data-delay="100">
+          <span class="section-counter">(CQ&reg; &mdash; 02)</span>
+          <span class="section-counter">&copy;2025</span>
+        </div>
+      </div>
+      <div class="process-right">
+        <div class="process-step" data-animate="fade-up">
+          <div class="process-step-number">01</div>
+          <h5 class="process-step-title">Consultation &amp; Design</h5>
+          <div class="process-step-desc">We begin by understanding your vision, requirements, and brand identity. Our design team creates detailed mockups and samples to ensure every detail aligns with your expectations.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:25%"></div><span class="process-progress-label">25%</span></div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="100">
+          <div class="process-step-number">02</div>
+          <h5 class="process-step-title">Production &amp; Quality Control</h5>
+          <div class="process-step-desc">Using state-of-the-art machinery and premium materials, we manufacture your order with precision. Every garment undergoes 12-point quality inspection before packaging.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:60%"></div><span class="process-progress-label">60%</span></div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="200">
+          <div class="process-step-number">03</div>
+          <h5 class="process-step-title">Delivery &amp; Support</h5>
+          <div class="process-step-desc">We handle global logistics and shipping with real-time tracking. Our support team remains available 24/6 to assist with any post-delivery needs.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:100%"></div><span class="process-progress-label">100%</span></div>
+        </div>
+        <div style="margin-top:24px;" data-animate="fade-up">
+          <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUT GROUP 02 — HERO (hero-image.webp bg + Hero features grid) ===== -->
 <div class="viper-cut-wrapper viper-cut-hero" id="heroReveal">
   <div class="viper-sticky-image">
     <img src="<?php echo e($heroImage); ?>" alt="Custom Streetwear hero background" onerror="this.src='/uploads/default.jpg'">
   </div>
 
-  <section class="hero-section viper-cut-content" id="heroSection">
+  <section class="hero-section viper-cut-content" id="heroContent">
     <div class="container">
-    <div class="page-heading-content">
-      <div class="hero-label" data-animate="fade-up">&copy;2025</div>
-      <h1 class="page-main-heading" data-animate="fade-up" data-delay="100">
-        <?php echo e($hero['main_heading'] ?? 'Premium Custom Streetwear'); ?><span class="asterisk">*</span>
-      </h1>
-      <p class="page-sub-heading" data-animate="fade-up" data-delay="200">
-        <?php echo e($hero['subheading'] ?? 'Custom Streetwear is a leading manufacturer of custom clothing. Crafted with precision. Worn with purpose.'); ?>
-      </p>
-    </div>
-
     <div class="hero-grid">
       <div class="hero-content">
-        <div class="hero-features" data-animate="fade-up" data-delay="300">
+        <div class="hero-features" data-animate="fade-up" data-delay="100">
           <div class="hero-feature">
             <div class="hero-feature-icon">&#x2713;</div>
             <div class="hero-feature-text">
@@ -183,12 +191,12 @@ include __DIR__ . '/../includes/header.php';
             </div>
           </div>
         </div>
-        <div data-animate="fade-up" data-delay="400">
+        <div data-animate="fade-up" data-delay="200">
           <button class="btn btn-lg" onclick="openQuoteModal()">Get in Touch</button>
         </div>
       </div>
 
-      <div class="hero-visual" data-animate="fade" data-delay="500">
+      <div class="hero-visual" data-animate="fade" data-delay="300">
         <div class="hero-image-wrap" style="position: relative;">
           <img src="<?php echo e($heroImage); ?>" alt="Custom Streetwear <?php echo e($hero['label_text'] ?? 'Premium Apparel'); ?>" width="600" height="700" loading="eager" onerror="this.style.display='none'">
           <div class="hero-badge">
