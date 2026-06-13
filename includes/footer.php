@@ -9,6 +9,7 @@ $whatsapp = getSetting('whatsapp_button_number', '');
 $logoText = getSetting('site_logo_text', 'CUSTOM STREETWEAR');
 $logoImage = getSetting('site_logo_image', '/uploads/settings/logo.webp');
 $navItems = [
+  ['label' => 'Home', 'url' => '/', 'num' => '01'],
   ['label' => 'About', 'url' => '/about-us', 'num' => '02'],
   ['label' => 'Work', 'url' => '/category/all', 'num' => '03'],
   ['label' => 'Insights', 'url' => '/blogs', 'num' => '04'],
@@ -26,22 +27,27 @@ $footerReviewsJson = json_encode(array_map(function($r) {
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-left">
-          <a href="/" class="header-logo">
-            <?php if ($logoImage): ?>
-            <img src="<?php echo e($logoImage); ?>" alt="<?php echo e($siteName); ?>" class="footer-logo-image">
-            <?php else: ?>
-            <?php echo e($logoText); ?>
-            <?php endif; ?>
-          </a>
-          <div class="footer-tagline">Stay connected<span class="serif-mark">&reg;</span></div>
-          <a href="mailto:<?php echo e($siteEmail); ?>" class="footer-email"><?php echo e($siteEmail); ?></a>
-          <p class="footer-desc"><?php echo e($footerText ?: 'Premium custom apparel manufacturer delivering quality since 2012.'); ?></p>
-          <button class="btn" onclick="openQuoteModal()">Contact Now</button>
+    <div class="footer-container">
+      <div class="footer-top-section">
+        <div class="footer-hero-image">
+          <img src="/assets/images/factory-bg.jpg" alt="Factory" loading="lazy">
         </div>
-        <div class="footer-right">
+        <div class="footer-logo-overlay">
+          <?php if ($logoImage): ?>
+          <img src="<?php echo e($logoImage); ?>" alt="<?php echo e($siteName); ?>" class="footer-logo-image">
+          <?php else: ?>
+          <span class="footer-logo-text"><?php echo e($logoText); ?></span>
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <div class="footer-content">
+          <div class="footer-email-section">
+            <div class="footer-tagline">Stay connected<span class="serif-mark">&reg;</span></div>
+            <a href="mailto:<?php echo e($siteEmail); ?>" class="footer-email"><?php echo e($siteEmail); ?></a>
+            <p class="footer-desc"><?php echo e($footerText ?: 'Premium custom apparel manufacturer delivering quality since 2012.'); ?></p>
+            <button class="btn btn-outline" onclick="openQuoteModal()">Contact Now</button>
+          </div>
           <nav class="footer-nav">
             <?php foreach ($navItems as $item): ?>
             <a href="<?php echo e($item['url']); ?>">

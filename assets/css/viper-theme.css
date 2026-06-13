@@ -315,23 +315,31 @@ h5, .h5 { font-size: 1rem; font-weight: 600; }
 .form-submit:hover { background: transparent; color: var(--text-primary); border: 1px solid var(--border-light); }
 .contact-portrait { position: absolute; bottom: -60px; right: -40px; width: 200px; height: 260px; border-radius: var(--radius-md); object-fit: cover; border: 1px solid var(--border); }
 
-.site-footer { background: var(--bg-primary); border-top: 1px solid var(--border); padding-top: 80px; }
-.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding-bottom: 60px; }
-.footer-left .header-logo { display: inline-block; margin-bottom: 8px; }
-.footer-logo-image { height: 36px; width: auto; }
-.footer-tagline { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 24px; letter-spacing: 0.05em; }
+.site-footer { background: var(--bg-primary); padding: 20px; }
+.footer-container { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.footer-top-section { position: relative; height: 300px; overflow: hidden; border-radius: 5px; }
+.footer-hero-image { width: 100%; height: 100%; }
+.footer-hero-image img { width: 100%; height: 100%; object-fit: cover; }
+.footer-logo-overlay { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; }
+.footer-logo-image { height: 80px; width: auto; filter: brightness(0) invert(1); }
+.footer-logo-text { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: #fff; letter-spacing: 2px; }
+.footer-middle { padding: 40px; }
+.footer-content { display: flex; justify-content: space-between; align-items: flex-start; gap: 60px; }
+.footer-email-section { max-width: 400px; }
+.footer-tagline { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px; letter-spacing: 0.05em; }
 .footer-email { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 700; display: block; margin-bottom: 12px; transition: var(--transition); }
 .footer-email:hover { color: var(--text-secondary); }
-.footer-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; max-width: 360px; margin-bottom: 24px; }
-.footer-right { display: flex; flex-direction: column; align-items: flex-end; }
+.footer-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
 .footer-nav { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
 .footer-nav a { font-size: 0.85rem; color: var(--text-secondary); transition: var(--transition); display: flex; align-items: center; gap: 8px; }
 .footer-nav a sup { font-size: 0.6rem; color: var(--text-muted); }
 .footer-nav a:hover { color: var(--text-primary); }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 16px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 16px; }
 .footer-copy { font-size: 0.8rem; color: var(--text-muted); }
 .back-to-top { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.8rem; color: var(--text-muted); background: none; cursor: pointer; transition: var(--transition); }
 .back-to-top:hover { border-color: var(--text-secondary); color: var(--text-secondary); }
+.btn-outline { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border: 1px solid var(--border); color: var(--text-primary); font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-radius: var(--radius-pill); transition: var(--transition); background: transparent; cursor: pointer; }
+.btn-outline:hover { background: var(--text-primary); color: var(--bg-primary); }
 
 [data-animate] { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
 [data-animate].visible { opacity: 1; transform: translateY(0); }
@@ -573,4 +581,12 @@ html, body {
   .breadcrumb li {
     animation: none;
   }
+}
+
+@media (max-width: 768px) {
+  .footer-content { flex-direction: column; gap: 40px; }
+  .footer-nav { align-items: flex-start; }
+  .footer-middle { padding: 24px; }
+  .footer-bottom { padding: 16px 24px; }
+  .footer-top-section { height: 200px; }
 }
