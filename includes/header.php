@@ -16,7 +16,7 @@ $navItems = [
   ['label' => 'Home', 'url' => '/', 'num' => '01'],
   ['label' => 'About', 'url' => '/about-us', 'num' => '02'],
   ['label' => 'Work', 'url' => '/category/all', 'num' => '03'],
-  ['label' => 'Insights', 'url' => '/blogs', 'num' => '04'],
+  ['label' => 'Blog', 'url' => '/blogs', 'num' => '04'],
 ];
 ?>
 <!DOCTYPE html>
@@ -72,15 +72,9 @@ $navItems = [
           <?php echo e($item['label']); ?><sup><?php echo e($item['num']); ?></sup>
         </a>
         <?php endforeach; ?>
-        <a href="/category/hoodies" class="header-cat-link">Hoodies</a>
-        <a href="/category/t-shirts" class="header-cat-link">T-Shirts</a>
-        <a href="/category/tracksuits" class="header-cat-link">Tracksuits</a>
-        <a href="/category/jackets" class="header-cat-link">Jackets</a>
-        <a href="/category/sports-uniform" class="header-cat-link">Uniforms</a>
-        <a href="/category/workwear" class="header-cat-link">Workwear</a>
       </nav>
       <div class="header-cta">
-        <button class="btn-3d" onclick="openQuoteModal()">Get Quote</button>
+        <button class="btn-3d" onclick="openQuoteModal()">Get in touch</button>
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
           <span class="theme-toggle-icon theme-toggle-sun" aria-hidden="true"></span>
           <span class="theme-toggle-icon theme-toggle-moon" aria-hidden="true"></span>
@@ -99,12 +93,6 @@ $navItems = [
         <?php echo e($item['label']); ?><sup><?php echo e($item['num']); ?></sup>
       </a>
       <?php endforeach; ?>
-      <a href="/category/hoodies">Hoodies</a>
-      <a href="/category/t-shirts">T-Shirts</a>
-      <a href="/category/tracksuits">Tracksuits</a>
-      <a href="/category/jackets">Jackets</a>
-      <a href="/category/sports-uniform">Uniforms</a>
-      <a href="/category/workwear">Workwear</a>
     </nav>
     <div class="mobile-drawer-footer">
       <button class="theme-toggle theme-toggle-wide" type="button" data-theme-toggle aria-label="Switch theme" aria-pressed="false">
@@ -113,7 +101,7 @@ $navItems = [
         <span class="theme-toggle-label">Theme</span>
       </button>
       <button class="btn-3d" style="width:100%;padding:14px 28px;" onclick="openQuoteModal(); document.getElementById('menuToggle').click();">
-        Get Quote
+        Get in touch
       </button>
     </div>
   </div>

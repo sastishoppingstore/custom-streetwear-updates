@@ -77,6 +77,24 @@ include __DIR__ . '/../includes/header.php';
 
 <div class="viper-scroll-stack">
 
+<!-- ===== MARQUEE TEXT BANNER ===== -->
+<section class="marquee-banner" style="position:relative; z-index:5; overflow:hidden; padding:20px 0; border-bottom:1px solid var(--border);">
+  <div class="marquee-track" style="display:flex; animation:marquee 30s linear infinite; white-space:nowrap;">
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Premium custom apparel manufacturer delivering quality since 2012</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Custom hoodies, tracksuits, jackets, uniforms and more</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Worldwide shipping with premium quality</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Premium custom apparel manufacturer delivering quality since 2012</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Custom hoodies, tracksuits, jackets, uniforms and more</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+    <span style="font-size:0.9rem; color:var(--text-secondary); padding:0 20px;">Worldwide shipping with premium quality</span>
+    <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+  </div>
+</section>
+
 <!-- ===== CUT GROUP 01 — INTRO ===== -->
 <div class="viper-cut-wrapper viper-cut-intro" id="introReveal">
   <div class="viper-sticky-image">
@@ -189,16 +207,22 @@ include __DIR__ . '/../includes/header.php';
           <div class="process-step-number">01</div>
           <h5 class="process-step-title">Consultation &amp; Design</h5>
           <div class="process-step-desc">We begin by understanding your vision, requirements, and brand identity. Our design team creates detailed mockups and samples to ensure every detail aligns with your expectations.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:25%"></div><span class="process-progress-label">25%</span></div>
         </div>
         <div class="process-step" data-animate="fade-up" data-delay="100">
           <div class="process-step-number">02</div>
           <h5 class="process-step-title">Production &amp; Quality Control</h5>
           <div class="process-step-desc">Using state-of-the-art machinery and premium materials, we manufacture your order with precision. Every garment undergoes 12-point quality inspection before packaging.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:60%"></div><span class="process-progress-label">60%</span></div>
         </div>
         <div class="process-step" data-animate="fade-up" data-delay="200">
           <div class="process-step-number">03</div>
           <h5 class="process-step-title">Delivery &amp; Support</h5>
           <div class="process-step-desc">We handle global logistics and shipping with real-time tracking. Our support team remains available 24/6 to assist with any post-delivery needs.</div>
+          <div class="process-progress-bar"><div class="process-progress-fill" style="width:100%"></div><span class="process-progress-label">100%</span></div>
+        </div>
+        <div style="margin-top:24px;" data-animate="fade-up">
+          <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
         </div>
       </div>
     </div>
@@ -262,6 +286,77 @@ include __DIR__ . '/../includes/header.php';
   </div>
 </section>
 </div>
+
+<!-- ===== SECTION 05 — SERVICES ===== -->
+<section class="section" id="services" style="position:relative; z-index:5;">
+  <div class="container">
+    <div class="viper-section-meta">
+      <span class="viper-section-tag"><span class="viper-dot"></span>Pro Services</span>
+      <span>(CQ&reg; &mdash; 05)</span>
+      <span>&copy;2025</span>
+    </div>
+    <div class="process-section">
+      <div class="process-left">
+        <span class="section-label" data-animate="fade-up">Pro Services</span>
+        <div class="counter-row" data-animate="fade-up" data-delay="100">
+          <span class="section-counter">(CQ&reg; &mdash; 05)</span>
+          <span class="section-counter">&copy;2025</span>
+        </div>
+        <div style="margin-top:24px;" data-animate="fade-up">
+          <div class="marquee-banner" style="overflow:hidden;">
+            <div class="marquee-track" style="display:flex; animation:marquee 20s linear infinite; white-space:nowrap;">
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Convert More, Grow Faster</span>
+              <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Future-Proof &amp; Scalable</span>
+              <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Convert More, Grow Faster</span>
+              <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+              <span style="font-size:1.5rem; font-weight:700; color:var(--text-primary); padding:0 20px;">Future-Proof &amp; Scalable</span>
+              <span style="color:var(--accent); padding:0 10px;">&#9670;</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:24px;" data-animate="fade-up">
+          <a href="/about-us" class="section-link">View about <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="process-right">
+        <div class="process-step" data-animate="fade-up">
+          <h5 class="process-step-title">Custom Hoodies &amp; Sweatshirts</h5>
+          <div class="process-step-desc">Premium quality hoodies and sweatshirts custom manufactured to your specifications.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="100">
+          <h5 class="process-step-title">Tracksuits &amp; Sportswear</h5>
+          <div class="process-step-desc">High-performance tracksuits and sportswear designed for comfort and style.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="150">
+          <h5 class="process-step-title">Jackets &amp; Outerwear</h5>
+          <div class="process-step-desc">Premium jackets and outerwear crafted with attention to detail.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="200">
+          <h5 class="process-step-title">T-Shirts &amp; Polos</h5>
+          <div class="process-step-desc">Custom t-shirts and polos with your brand identity.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="250">
+          <h5 class="process-step-title">Sports Uniforms</h5>
+          <div class="process-step-desc">Professional sports uniforms for teams and organizations.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="300">
+          <h5 class="process-step-title">Workwear &amp; Safety</h5>
+          <div class="process-step-desc">Durable workwear and safety apparel for industrial use.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="350">
+          <h5 class="process-step-title">Private Label Manufacturing</h5>
+          <div class="process-step-desc">Complete private label manufacturing solutions for your brand.</div>
+        </div>
+        <div class="process-step" data-animate="fade-up" data-delay="400">
+          <h5 class="process-step-title">Custom Accessories</h5>
+          <div class="process-step-desc">Hats, bags, and other custom accessories to complete your collection.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== SECTION 04 — STATS ===== -->
 <section class="stats-section" id="stats" style="position:relative; z-index:5;">
@@ -348,6 +443,8 @@ include __DIR__ . '/../includes/header.php';
         ['name' => 'James Mitchell', 'role' => 'CEO', 'company' => 'Mitchell Sports', 'text' => 'The quality and attention to detail exceeded our expectations. Our team uniforms have never looked better. The turnaround time was impressive and the communication throughout was excellent.'],
         ['name' => 'Sarah Chen', 'role' => 'Founder', 'company' => 'Urban Threads', 'text' => 'Working with Custom Streetwear has been transformative for our brand. Their ability to handle complex customizations with consistent quality makes them our go-to manufacturer.'],
         ['name' => 'Marcus Williams', 'role' => 'Operations Director', 'company' => 'Premier Athletics', 'text' => 'We have partnered with many manufacturers over the years, but none have delivered the level of service and quality that Custom Streetwear provides. Highly recommended.'],
+        ['name' => 'Emily Rodriguez', 'role' => 'Brand Manager', 'company' => 'Lifestyle Apparel Co.', 'text' => 'From concept to delivery, the team at Custom Streetwear has been exceptional. Their attention to detail and commitment to quality is unmatched in the industry.'],
+        ['name' => 'David Kim', 'role' => 'Creative Director', 'company' => 'Urban Style Labs', 'text' => 'Custom Streetwear has been our trusted manufacturing partner for over 3 years. Their consistent quality and on-time delivery make them invaluable to our business.'],
       ];
       foreach ($testimonials as $t):
       ?>
@@ -497,10 +594,166 @@ include __DIR__ . '/../includes/header.php';
           <a href="/blogs" class="blog-card-link">Read more &rarr;</a>
         </div>
       </div>
+      <div class="blog-card">
+        <img src="/uploads/blogs/blog-2.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Industry Trends</span>
+          <div class="blog-card-date">April 1, 2025</div>
+          <h4 class="blog-card-title">Sustainable Fashion: Leading the Change</h4>
+          <a href="/blogs" class="blog-card-link">Read more &rarr;</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="/uploads/blogs/blog-3.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+        <div class="blog-card-body">
+          <span class="blog-card-tag">Quality Control</span>
+          <div class="blog-card-date">September 14, 2025</div>
+          <h4 class="blog-card-title">Quality Assurance in Apparel Production</h4>
+          <a href="/blogs" class="blog-card-link">Read more &rarr;</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 </div>
+
+<!-- ===== SECTION 09 — WEBSITE EXPERT ===== -->
+<section class="section section-alt" id="expert" style="position:relative; z-index:5;">
+  <div class="container">
+    <div class="viper-section-meta">
+      <span class="viper-section-tag"><span class="viper-dot"></span>Framer Expert</span>
+      <span>(CQ&reg; &mdash; 09)</span>
+      <span>&copy;2025</span>
+    </div>
+    <div class="process-section">
+      <div class="process-left">
+        <span class="section-label" data-animate="fade-up">Framer Expert</span>
+        <div class="counter-row" data-animate="fade-up" data-delay="100">
+          <span class="section-counter">(CQ&reg; &mdash; 09)</span>
+          <span class="section-counter">&copy;2025</span>
+        </div>
+      </div>
+      <div class="process-right">
+        <div class="section-header" data-animate="fade-up">
+          <h2 class="h2">Custom Apparel Templates. Bringing Your Ideas to Life.</h2>
+          <p class="body-text mt-16">We specialize in creating premium custom apparel that represents your brand. From hoodies to jackets, tracksuits to uniforms, we bring your vision to life with precision and quality.</p>
+        </div>
+        <div style="margin-top:24px;" data-animate="fade-up">
+          <a href="/category/all" class="section-link">View portfolio <span class="arrow">&rarr;</span></a>
+        </div>
+        <div style="margin-top:16px;" data-animate="fade-up">
+          <span class="tag-pill">299+ People Rated</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 10 — PRICING ===== -->
+<section class="section" id="pricing" style="position:relative; z-index:5;">
+  <div class="container">
+    <div class="viper-section-meta">
+      <span class="viper-section-tag"><span class="viper-dot"></span>Premium Plans</span>
+      <span>(CQ&reg; &mdash; 10)</span>
+      <span>&copy;2025</span>
+    </div>
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-label">Premium Plans</span>
+      <h2 class="h2 mt-8">Premium Plans. Feasible Plans.<span class="serif-mark">&reg;</span></h2>
+    </div>
+    <div class="pricing-grid" data-animate="fade-up">
+      <div class="pricing-card">
+        <div class="pricing-tag">MOST PICK</div>
+        <h3 class="pricing-name">Starter Plan</h3>
+        <div class="pricing-price">$4,999<span>/year</span></div>
+        <ul class="pricing-features">
+          <li>All templates unlocked</li>
+          <li>Unlimited requests</li>
+          <li>Unlimited revisions</li>
+          <li>Project management</li>
+          <li>Access to all services</li>
+          <li>Pause or cancel anytime</li>
+        </ul>
+        <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
+      </div>
+      <div class="pricing-card">
+        <h3 class="pricing-name">Growth Plan</h3>
+        <div class="pricing-price">$6,999<span>/year</span></div>
+        <ul class="pricing-features">
+          <li>All templates unlocked</li>
+          <li>Unlimited requests</li>
+          <li>Unlimited revisions</li>
+          <li>Project management</li>
+          <li>Access to all services</li>
+          <li>Pause or cancel anytime</li>
+        </ul>
+        <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
+      </div>
+      <div class="pricing-card">
+        <h3 class="pricing-name">Premium Plan</h3>
+        <div class="pricing-price">$8,999<span>/year</span></div>
+        <ul class="pricing-features">
+          <li>All templates unlocked</li>
+          <li>Unlimited requests</li>
+          <li>Unlimited revisions</li>
+          <li>Project management</li>
+          <li>Access to all services</li>
+          <li>Pause or cancel anytime</li>
+        </ul>
+        <button class="btn btn-outline" onclick="openQuoteModal()">Contact now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 11 — FAQ ===== -->
+<section class="section section-alt" id="faq" style="position:relative; z-index:5;">
+  <div class="container">
+    <div class="viper-section-meta">
+      <span class="viper-section-tag"><span class="viper-dot"></span>FAQ</span>
+      <span>(CQ&reg; &mdash; 11)</span>
+      <span>&copy;2025</span>
+    </div>
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-label">FAQ</span>
+      <h2 class="h2 mt-8">Frequently Asked Questions.<span class="serif-mark">&reg;</span></h2>
+    </div>
+    <div class="faq-list" data-animate="fade-up">
+      <div class="faq-item">
+        <div class="faq-question"><span>01</span> What does a project look like?</div>
+        <div class="faq-answer">Every project starts with understanding your vision. We work closely with you to create custom apparel that matches your brand identity.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>02</span> How is the pricing structure?</div>
+        <div class="faq-answer">Our pricing is based on order quantity, design complexity, and materials used. We offer competitive rates for bulk orders.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>03</span> Are all projects fixed scope?</div>
+        <div class="faq-answer">We work with both fixed scope and ongoing partnerships. Choose what works best for your business needs.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>04</span> What is the ROI?</div>
+        <div class="faq-answer">Our clients typically see 3-5x return on investment through reduced costs, faster turnaround, and premium quality products.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>05</span> How do we measure success?</div>
+        <div class="faq-answer">We track quality metrics, delivery times, and customer satisfaction to ensure consistent success.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>06</span> What do I need to get started?</div>
+        <div class="faq-answer">Simply reach out with your design ideas or requirements. We'll guide you through the entire process from concept to delivery.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>07</span> How easy is it to edit for beginners?</div>
+        <div class="faq-answer">Our team handles all the technical aspects. You just need to provide your vision and we take care of the rest.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>08</span> Do I need to know how to code?</div>
+        <div class="faq-answer">Not at all. We handle everything from design to production. You don't need any technical knowledge.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===== SECTION 13 — CONTACT CTA (VIPER MATCH) ===== -->
 <section class="section" id="contactCTA" style="position:relative; z-index:5;">
