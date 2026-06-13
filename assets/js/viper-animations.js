@@ -581,7 +581,7 @@
 
 /* ================================================
    30. CUSTOM PIN & SPIN OVERLAP ANIMATION (Naya Code)
-================================================ */
+=============================================== */
 document.addEventListener("DOMContentLoaded", function() {
     const targetImages = document.querySelectorAll('.hero-image-wrap img, .portfolio-card-image, .bento-card img, .gallery-item img, .gallery-scroll-item img');
 
@@ -595,19 +595,16 @@ document.addEventListener("DOMContentLoaded", function() {
             
             const parentCenter = rect.top + (rect.height / 2);
             let translateY = 0;
-            let rotate = 0;
 
             if (parentCenter <= screenCenter) {
-                // Pin image to the center of the screen
                 translateY = screenCenter - parentCenter; 
-                // Spin animation logic (speed 0.08)
-                rotate = (screenCenter - parentCenter) * 0.08; 
             }
 
-            // Apply smooth transform
-            img.style.transform = 'translateY(' + translateY + 'px) rotate(' + rotate + 'deg)';
+            img.style.transform = 'translateY(' + translateY + 'px)';
             img.style.transition = 'transform 0.1s ease-out';
             img.style.willChange = 'transform';
         });
+    }, { passive: true });
+});
     }, { passive: true });
 });
