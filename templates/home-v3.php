@@ -27,12 +27,6 @@ if ($_cacheData) {
 }
 
 $heroImage = $hero['hero_image'] ?? '/uploads/hero-image.webp';
-if (!file_exists(CSW_ROOT . $heroImage)) {
-  $heroImage = '/uploads/hero-image.webp';
-}
-if (!file_exists(CSW_ROOT . $heroImage)) {
-  $heroImage = '/uploads/default.jpg';
-}
 
 $_allProductImgs = glob(CSW_ROOT . '/uploads/products/*.webp') ?: [];
 if (empty($_allProductImgs)) {
@@ -46,28 +40,10 @@ $_products = dbFetchAll("SELECT id, title as name, slug, main_image as image, sh
 $_dbCats = dbFetchAll("SELECT id, name, slug, image, description FROM categories WHERE status = 1 ORDER BY sort_order, name LIMIT 4");
 
 $cutIntroImage = '/uploads/categories/hoodies.webp';
-if (!file_exists(CSW_ROOT . $cutIntroImage)) {
-    $cutIntroImage = $heroImage;
-}
-$cutPortfolioImage = !empty($categories[0]['image']) ? $categories[0]['image'] : (!empty($_dbCats[0]['image']) ? $_dbCats[0]['image'] : (!empty($_heroSliderImgs[0]) ? $_heroSliderImgs[0] : $heroImage));
+$cutPortfolioImage = !empty($categories[0]['image']) ? $categories[0]['image'] : (!empty($_dbCats[0]['image']) ? $_dbCats[0]['image'] : (!empty($_heroSliderImgs[0]) ? $_heroSliderImgs[0] : '/assets/images/portfolio-bg.jpg'));
 $cutBenefitsImage = '/uploads/fashion-bg.jpg';
-if (!file_exists(CSW_ROOT . $cutBenefitsImage)) {
-    $cutBenefitsImage = '/uploads/products/custom-sublimation-hoodie.webp';
-}
-if (!file_exists(CSW_ROOT . $cutBenefitsImage)) {
-    $cutBenefitsImage = !empty($_heroSliderImgs[1]) ? $_heroSliderImgs[1] : $heroImage;
-}
 $cutShotsImage = '/uploads/factory-bg.jpg';
-if (!file_exists(CSW_ROOT . $cutShotsImage)) {
-    $cutShotsImage = !empty($_heroSliderImgs[2]) ? $_heroSliderImgs[2] : (!empty($_heroSliderImgs[0]) ? $_heroSliderImgs[0] : $heroImage);
-}
 $cutUpdatesImage = '/uploads/blog-bg.jpg';
-if (!file_exists(CSW_ROOT . $cutUpdatesImage)) {
-    $cutUpdatesImage = '/uploads/blogs/blog-1.webp';
-}
-if (!file_exists(CSW_ROOT . $cutUpdatesImage)) {
-    $cutUpdatesImage = $heroImage;
-}
 
 $metaTags = generateAdvancedMetaTags([
   'meta_title' => getSetting('home_meta_title', 'Custom Streetwear Manufacturer | Private Label Apparel Factory'),
@@ -101,7 +77,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 01 — HEADLINE ON hoodies.webp (Viper style) ===== -->
 <div class="viper-cut-wrapper viper-cut-intro" id="introReveal">
   <div class="viper-sticky-image">
-    <img src="<?php echo e($cutIntroImage); ?>" alt="Custom Streetwear intro background" onerror="this.src='/uploads/default.jpg'">
+    <img src="<?php echo e($cutIntroImage); ?>" alt="Custom Streetwear intro background" onerror="this.src='/uploads/categories/hoodies.webp'">
   </div>
 
   <section class="hero-section viper-cut-content" id="heroSection">
@@ -168,7 +144,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 02 — FEATURES (manufacturing.jpg bg + Hero features grid) ===== -->
 <div class="viper-cut-wrapper viper-cut-hero" id="heroReveal">
   <div class="viper-sticky-image">
-    <img src="/assets/images/manufacturing.jpg" alt="Custom Streetwear manufacturing background" onerror="this.src='/uploads/default.jpg'">
+    <img src="/assets/images/manufacturing.jpg" alt="Custom Streetwear manufacturing background" onerror="this.src='/assets/images/sewing-fallback.jpg'">
   </div>
 
   <section class="hero-section viper-cut-content" id="heroContent">
@@ -213,7 +189,7 @@ include __DIR__ . '/../includes/header.php';
               <?php endforeach; ?>
               <?php if (empty($_heroSliderImgs)): ?>
               <div class="hero-floating-item active">
-                <img src="/uploads/default.jpg" alt="Product">
+                <img src="/uploads/products/custom-sublimation-hoodie.webp" alt="Product">
               </div>
               <?php endif; ?>
             </div>
@@ -249,7 +225,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 03 — FEATURED WORKS ===== -->
 <div class="viper-cut-wrapper viper-cut-featured" id="featuredWorksReveal">
   <div class="viper-sticky-image">
-    <img src="/assets/images/fabric-rolls.jpg" alt="Featured works background" onerror="this.src='/uploads/default.jpg'">
+    <img src="/assets/images/fabric-rolls.jpg" alt="Featured works background" onerror="this.src='/uploads/fashion-bg.jpg'">
   </div>
 
 <section class="section viper-cut-content" id="portfolio">
@@ -288,7 +264,7 @@ include __DIR__ . '/../includes/header.php';
       ?>
       <a href="<?php echo e($cat['link']); ?>" class="portfolio-card">
         <div class="portfolio-card-img-wrap">
-          <img src="<?php echo e($cat['image']); ?>" alt="<?php echo e($cat['title']); ?>" class="portfolio-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+          <img src="<?php echo e($cat['image']); ?>" alt="<?php echo e($cat['title']); ?>" class="portfolio-card-image" loading="lazy" onerror="this.src='/assets/images/portfolio-bg.jpg'">
           <div class="portfolio-card-overlay-tags">
             <span class="tag-pill">Featured</span>
             <span class="tag-pill"><?php echo e($cat['subtitle'] ?? 'Custom Apparel'); ?></span>
@@ -397,7 +373,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 03 — BENEFITS ===== -->
 <div class="viper-cut-wrapper viper-cut-benefits" id="benefitsReveal">
   <div class="viper-sticky-image">
-    <img src="<?php echo e($cutBenefitsImage); ?>" alt="Benefits background" onerror="this.src='/uploads/default.jpg'">
+    <img src="<?php echo e($cutBenefitsImage); ?>" alt="Benefits background" onerror="this.src='/assets/images/benefits-bg.jpg'">
   </div>
 
 <section class="section section-alt viper-cut-content" id="benefits">
@@ -433,7 +409,7 @@ include __DIR__ . '/../includes/header.php';
         <p class="bento-desc">Round-the-clock support to assist you every step of the way.</p>
       </div>
       <div class="bento-card bento-card-mockup" data-animate="fade-up" data-delay="150">
-        <img src="/uploads/products/custom-sublimation-hoodie.webp" alt="Mobile product preview" onerror="this.src='/uploads/products/custom-sublimation-hoodie.jpg';this.onerror=function(){this.src='/uploads/default.jpg'}">
+        <img src="/assets/images/product-preview.jpg" alt="Mobile product preview" onerror="this.src='/uploads/products/custom-sublimation-hoodie.webp'">
       </div>
     </div>
   </div>
@@ -491,7 +467,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 04 — SHOTS BY ME (PERFECT 100% FRAMER COVERFLOW) ===== -->
 <div class="viper-cut-wrapper viper-cut-shots" id="shotsReveal">
   <div class="viper-sticky-image">
-    <img src="<?php echo e($cutShotsImage); ?>" alt="Shots by me background" onerror="this.src='/uploads/default.jpg'">
+    <img src="<?php echo e($cutShotsImage); ?>" alt="Shots by me background" onerror="this.src='/assets/images/manufacturing.jpg'">
   </div>
 
 <section class="section viper-cut-content" id="gallery">
@@ -586,7 +562,7 @@ include __DIR__ . '/../includes/header.php';
 <!-- ===== CUT GROUP 05 — LATEST UPDATES ===== -->
 <div class="viper-cut-wrapper viper-cut-updates" id="latestUpdatesReveal">
   <div class="viper-sticky-image">
-    <img src="<?php echo e($cutUpdatesImage); ?>" alt="Latest updates background" onerror="this.src='/uploads/default.jpg'">
+    <img src="<?php echo e($cutUpdatesImage); ?>" alt="Latest updates background" onerror="this.src='/assets/images/workshop.jpg'">
   </div>
 
 <section class="section section-alt viper-cut-content" id="insights">
@@ -606,7 +582,7 @@ include __DIR__ . '/../includes/header.php';
     </div>
     <div class="blog-grid stagger-children" data-animate>
       <div class="blog-card">
-        <img src="/uploads/blogs/blog-1.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+        <img src="/uploads/blogs/blog-1.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/assets/images/blog-fallback.jpg'">
         <div class="blog-card-body">
           <span class="blog-card-tag">Manufacturing</span>
           <div class="blog-card-date">March 15, 2025</div>
@@ -615,7 +591,7 @@ include __DIR__ . '/../includes/header.php';
         </div>
       </div>
       <div class="blog-card">
-        <img src="/uploads/blogs/blog-2.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+        <img src="/uploads/blogs/blog-2.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/assets/images/sewing.jpg'">
         <div class="blog-card-body">
           <span class="blog-card-tag">Industry Trends</span>
           <div class="blog-card-date">April 1, 2025</div>
@@ -624,7 +600,7 @@ include __DIR__ . '/../includes/header.php';
         </div>
       </div>
       <div class="blog-card">
-        <img src="/uploads/blogs/blog-3.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/uploads/default.jpg'">
+        <img src="/uploads/blogs/blog-3.webp" alt="Blog" class="blog-card-image" loading="lazy" onerror="this.src='/assets/images/fabric-texture.jpg'">
         <div class="blog-card-body">
           <span class="blog-card-tag">Quality Control</span>
           <div class="blog-card-date">September 14, 2025</div>
